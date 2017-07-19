@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seniverse API Test Page</title>
+  <script type="text/javascript" src="scripts/jquery.js"></script>
+  <script type="text/javascript" src="scripts/hmac-sha1.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+
+
+<script type="text/javascript">
+function callback(data) {
+        alert(data.message);
+     }
+     //添加<script>标签的方法
+     function addScriptTag(src){
+    var script = document.createElement('script');
+         script.setAttribute("type","text/javascript");
+          script.src = src;
+         document.body.appendChild(script);
+     }
+
+     window.onload = function(){
+         addScriptTag("http://localhost:20002/test.js");
+    }
+</script>
+</body>
+</html>
